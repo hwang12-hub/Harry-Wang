@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HaoYu Equestrian Club - About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <img src="images/Logo.jpg" alt="HaoYu Equestrian Club" width="80px" class="me-4">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item me-3">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a href="gallery.html" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a href="about.html" class="nav-link active">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 订阅模态框 -->
+    <div class="modal fade" id="subscribeModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Subscribe to Our Newsletter</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="subscribeForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="consent">
+                            <label class="form-check-label" for="consent">I agree to receive updates</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-gold" id="submitSubscribe">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content py-5">
+        <div class="container">
+            <div class="section-title mb-5">
+                <h2>About HaoYu Equestrian Club</h2>
+                <p>A lifestyle of grace, balance, and partnership</p>
+            </div>
+            
+            <div class="row about-content mb-10">
+                <div class="col-md-6 mb-5 mb-md-0">
+                    <div class="rounded-3 overflow-hidden shadow-lg">
+                        <img src="images/gallery7.jpg" alt="HaoYu Equestrian Club" class="w-100">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="accordion mb-4" id="aboutAccordion">
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="headingMission">
+                                <button class="accordion-button bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMission">
+                                    Our Mission
+                                </button>
+                            </h2>
+                            <div id="collapseMission" class="accordion-collapse collapse show" data-bs-parent="#aboutAccordion">
+                                <div class="accordion-body">
+                                    <p>At HaoYu Equestrian Club, we believe that equestrianism is more than a sport — it is a lifestyle of grace, balance, and partnership. We are committed to providing the highest quality equestrian experience for every member, whether pursuing leisure riding or competitive performance.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="headingHistory">
+                                <button class="accordion-button bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHistory">
+                                    Our History
+                                </button>
+                            </h2>
+                            <div id="collapseHistory" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+                                <div class="accordion-body">
+                                    <p>HaoYu Equestrian Club was established in 2010. After more than a decade of development, it has become one of the leading equestrian clubs in China. We boast world-class facilities, a professional coaching team, and carefully selected premium horses.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="headingValues">
+                                <button class="accordion-button bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseValues">
+                                    Our Values
+                                </button>
+                            </h2>
+                            <div id="collapseValues" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+                                <div class="accordion-body">
+                                    <p>We value refinement, discipline, and connection with the horse. We believe that by establishing a deep connection with horses, riders can not only improve their equestrian skills but also cultivate patience, responsibility, and an elegant attitude toward life.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quote p-4 border-start border-gold bg-light mb-4">
+                        "Step into a living tapestry where the soft echo of hooves on ancient earth mingles with the hush of silk skirts brushing polished leather. Here, every dawn begins with the scent of warm bay rum and sun-dried cedar, as riders in impeccably tailored coats greet mounts whose bloodlines stretch back farther than the family crests embroidered on their saddle pads."
+                    </div>
+                    <div class="quote p-4 border-start border-gold bg-light mb-4">
+                        Join a community that celebrates elegance, tradition, and the timeless bond between horse and rider.
+                    </div>
+                    
+                    <a href="gallery.html" class="btn btn-gold">Visit Our Facilities</a>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm hover-shadow transition-transform">
+                        <div class="card-body text-center p-5">
+                            <div class="feature-icon mb-4">🎯</div>
+                            <h3 class="card-title mb-3">Professional Coaching Team</h3>
+                            <p class="card-text">We have professional equestrian coaches from both domestic and international backgrounds, all holding international certifications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm hover-shadow transition-transform">
+                        <div class="card-body text-center p-5">
+                            <div class="feature-icon mb-4">🏅</div>
+                            <h3 class="card-title mb-3">Competition Achievements</h3>
+                            <p class="card-text">Our members have achieved excellent results in numerous domestic and international equestrian competitions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm hover-shadow transition-transform">
+                        <div class="card-body text-center p-5">
+                            <div class="feature-icon mb-4">🤝</div>
+                            <h3 class="card-title mb-3">Community Activities</h3>
+                            <p class="card-text">We regularly host equestrian culture salons, themed parties, and charity events for our members.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <p class="h5 mb-2">HaoYu Equestrian Club &copy; 2025</p>
+                    <p>Where passion meets prestige</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>Address: 88 Equestrian Avenue, Chaoyang District, Beijing</p>
+                    <p>Phone: 010-88889999</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 订阅表单处理
+        document.getElementById('submitSubscribe').addEventListener('click', function() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const consent = document.getElementById('consent').checked;
+            
+            if (name && email && consent) {
+                const modal = bootstrap.Modal.getInstance(document.getElementById('subscribeModal'));
+                modal.hide();
+                
+                const toast = new bootstrap.Toast(document.getElementById('subscribeToast'));
+                document.getElementById('toastMessage').textContent = `Thank you for subscribing, ${name}!`;
+                toast.show();
+                
+                document.getElementById('subscribeForm').reset();
+            } else {
+                alert('Please fill in all required fields and agree to the terms.');
+            }
+        });
+    </script>
+    
+    <!-- 提示框 -->
+    <div class="toast-container position-fixed bottom-5 end-5">
+        <div id="subscribeToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-primary text-white">
+                <strong class="me-auto">Success</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="toastMessage">
+                Thank you for subscribing!
+            </div>
+        </div>
+    </div>
+</body>
+</html>
