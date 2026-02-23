@@ -39,7 +39,7 @@ body {
 .hero p {
     margin-top: 15px;
     font-size: 18px;
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
 .section {
@@ -59,12 +59,32 @@ body {
     box-shadow: 0 20px 40px rgba(0,0,0,0.05);
 }
 
-.projects ul {
+ul {
     padding-left: 20px;
 }
 
-.projects li {
-    margin-bottom: 12px;
+li {
+    margin-bottom: 15px;
+}
+
+.interactive-heading {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.interactive-heading:hover {
+    opacity: 0.6;
+}
+
+.hidden-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.hidden-content.open {
+    max-height: 500px;
+    margin-top: 20px;
 }
 
 footer {
@@ -85,6 +105,7 @@ footer {
 
 <div class="container">
 
+    <!-- About Section -->
     <div class="section">
         <h2>About Me</h2>
         <div class="card">
@@ -94,14 +115,19 @@ footer {
                 learning drums and guitar.
             </p>
             <p>
-                I am passionate about building organizations that create opportunity, discipline,
-                and long-term growth. Last year, I founded an Equestrian Club, combining leadership,
-                athletic training, and community development.
+                Growing up, I faced difficulty communicating with my father. That experience
+                shaped how I think about leadership and community. I believe structured shared
+                experiences can help families connect in deeper ways.
+            </p>
+            <p>
+                Last year, I founded an Equestrian Club focused not only on riding skills,
+                but also on resilience education and strengthening the parent-child relationship.
             </p>
         </div>
     </div>
 
-    <div class="section projects">
+    <!-- Projects Section -->
+    <div class="section">
         <h2>Projects</h2>
         <div class="card">
             <ul>
@@ -112,11 +138,67 @@ footer {
         </div>
     </div>
 
+    <!-- Proof Section -->
+    <div class="section">
+        <h2>Why Trust This?</h2>
+        <div class="card">
+            <ul>
+                <li>
+                    <strong>Proven Community Builder:</strong> I founded a music school that has grown to over 150 students. 
+                    Sustained growth at that scale shows families trust the environment and the results.
+                </li>
+                <li>
+                    <strong>Real Parent–Child Impact:</strong> Through both my music school and equestrian club, 
+                    I have seen parents better understand their children — not only their talents, 
+                    but also their struggles. Being a kid is not always sunshine and rainbows.
+                </li>
+                <li>
+                    <strong>Intentional Growth Design:</strong> My programs combine equestrian training, 
+                    resilience education, and structured shared experiences that create space for 
+                    conversation, reflection, and long-term character development.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Interactive Section -->
+    <div class="section">
+        <h2 class="interactive-heading" onclick="toggleContent()">
+            What I Care About Right Now
+        </h2>
+
+        <div id="careContent" class="hidden-content">
+            <div class="card">
+                <p>
+                    Right now, I am exploring how structured activities like music and horseback riding
+                    can improve communication between kids and parents.
+                </p>
+                <p>
+                    I am especially interested in how resilience education and shared challenges
+                    can strengthen family relationships while building real skill.
+                </p>
+                <p>
+                    I believe there is an edge in designing community spaces that feel like home,
+                    while still building discipline and long-term growth. If you care about youth
+                    development, family connection, and meaningful offline experiences,
+                    my work may be worth following.
+                </p>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <footer>
     © 2026 Harry Wang
 </footer>
+
+<script>
+function toggleContent() {
+    const content = document.getElementById("careContent");
+    content.classList.toggle("open");
+}
+</script>
 
 </body>
 </html>
