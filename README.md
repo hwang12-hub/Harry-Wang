@@ -5,68 +5,85 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Harry Wang</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* =========================
+   DESIGN SYSTEM
+========================= */
+
+:root {
+    --bg: #f9fafb;
+    --surface: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #64748b;
+    --accent: #1e293b;
+    --radius: 16px;
+}
+
+/* Typography Scale */
+h1 { font-size: 64px; font-weight: 700; letter-spacing: -1px; }
+h2 { font-size: 32px; font-weight: 600; }
+p  { font-size: 18px; }
+small { font-size: 14px; color: var(--text-secondary); }
+
+/* Layout System */
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: #f8f9fb;
-    color: #111;
-    line-height: 1.6;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.7;
+}
+
+.section {
+    padding: 120px 24px;
 }
 
 .container {
     max-width: 900px;
-    margin: auto;
-    padding: 80px 20px;
+    margin: 0 auto;
 }
 
+/* Hero */
 .hero {
-    text-align: center;
-    padding: 120px 20px 80px 20px;
-    background: linear-gradient(135deg, #1f2937, #111827);
+    background: var(--accent);
     color: white;
-}
-
-.hero h1 {
-    font-size: 56px;
-    margin: 0;
-    font-weight: 700;
-    letter-spacing: -1px;
+    text-align: center;
+    padding: 160px 24px 120px 24px;
 }
 
 .hero p {
-    margin-top: 15px;
-    font-size: 18px;
+    margin-top: 16px;
+    font-size: 20px;
     opacity: 0.85;
 }
 
-.section {
-    margin-bottom: 80px;
-}
-
-.section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    font-weight: 600;
-}
-
+/* Card */
 .card {
-    background: white;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    background: var(--surface);
+    padding: 48px;
+    border-radius: var(--radius);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
 }
 
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* Lists */
 ul {
     padding-left: 20px;
 }
 
 li {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
+    font-size: 18px;
 }
 
+/* Interactive */
 .interactive-heading {
     cursor: pointer;
     transition: opacity 0.3s ease;
@@ -83,30 +100,51 @@ li {
 }
 
 .hidden-content.open {
-    max-height: 500px;
-    margin-top: 20px;
+    max-height: 700px;
+    margin-top: 32px;
 }
 
+/* Footer */
 footer {
     text-align: center;
-    padding: 40px;
+    padding: 80px 24px;
+    color: var(--text-secondary);
     font-size: 14px;
-    color: #666;
 }
+
+/* Button System (future ready) */
+.button {
+    display: inline-block;
+    padding: 14px 28px;
+    background: var(--accent);
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="hero">
-    <h1>Harry Wang</h1>
-    <p>Entrepreneur | Founder | Community Builder</p>
-</div>
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <h1>Harry Wang</h1>
+        <p>Entrepreneur | Founder | Community Builder</p>
+    </div>
+</section>
 
-<div class="container">
-
-    <!-- About Section -->
-    <div class="section">
+<!-- ABOUT -->
+<section class="section">
+    <div class="container">
         <h2>About Me</h2>
         <div class="card">
             <p>
@@ -125,9 +163,11 @@ footer {
             </p>
         </div>
     </div>
+</section>
 
-    <!-- Projects Section -->
-    <div class="section">
+<!-- PROJECTS -->
+<section class="section">
+    <div class="container">
         <h2>Projects</h2>
         <div class="card">
             <ul>
@@ -137,9 +177,11 @@ footer {
             </ul>
         </div>
     </div>
+</section>
 
-    <!-- Proof Section -->
-    <div class="section">
+<!-- PROOF -->
+<section class="section">
+    <div class="container">
         <h2>Why Trust This?</h2>
         <div class="card">
             <ul>
@@ -160,9 +202,11 @@ footer {
             </ul>
         </div>
     </div>
+</section>
 
-    <!-- Interactive Section -->
-    <div class="section">
+<!-- INTERACTIVE -->
+<section class="section">
+    <div class="container">
         <h2 class="interactive-heading" onclick="toggleContent()">
             What I Care About Right Now
         </h2>
@@ -186,8 +230,7 @@ footer {
             </div>
         </div>
     </div>
-
-</div>
+</section>
 
 <footer>
     © 2026 Harry Wang
